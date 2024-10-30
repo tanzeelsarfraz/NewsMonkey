@@ -6,7 +6,7 @@ export default class Navbar extends Component {
     title: "News Monkey",
   };
   static propTypes = {
-    title: PropTypes.number.isRequired,
+    title: PropTypes.string.isRequired,
   };
   tabs = {
     home: "active",
@@ -50,6 +50,71 @@ export default class Navbar extends Component {
           sports: "inactive",
           technology: "inactive",
           entertainment: "active",
+        },
+      });
+    else if (tabName === "health")
+      this.setState({
+        navItems: {
+          home: "inactive",
+          business: "inactive",
+          general: "inactive",
+          health: "active",
+          science: "inactive",
+          sports: "inactive",
+          technology: "inactive",
+          entertainment: "inactive",
+        },
+      });
+    else if (tabName === "science")
+      this.setState({
+        navItems: {
+          home: "inactive",
+          business: "inactive",
+          general: "inactive",
+          health: "inactive",
+          science: "active",
+          sports: "inactive",
+          technology: "inactive",
+          entertainment: "inactive",
+        },
+      });
+    else if (tabName === "sports")
+      this.setState({
+        navItems: {
+          home: "inactive",
+          business: "inactive",
+          general: "inactive",
+          health: "inactive",
+          science: "inactive",
+          sports: "active",
+          technology: "inactive",
+          entertainment: "inactive",
+        },
+      });
+    else if (tabName === "technology")
+      this.setState({
+        navItems: {
+          home: "inactive",
+          business: "inactive",
+          general: "inactive",
+          health: "inactive",
+          science: "inactive",
+          sports: "inactive",
+          technology: "active",
+          entertainment: "inactive",
+        },
+      });
+    else
+      this.setState({
+        navItems: {
+          home: "active",
+          business: "inactive",
+          general: "active",
+          health: "inactive",
+          science: "inactive",
+          sports: "inactive",
+          technology: "inactive",
+          entertainment: "inactive",
         },
       });
   };
