@@ -3,8 +3,10 @@ import Navbar from "./components/Navbar";
 import News from "./components/News";
 import LoadingBar from "react-top-loading-bar";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
 export default class App extends Component {
   myName = "Tanzeel";
+  apiKey = process.env.REACT_APP_NEWS_API_KEY;
   pageSize = 10;
   constructor() {
     super();
@@ -52,7 +54,7 @@ export default class App extends Component {
               <Route
                 path="/"
                 element={
-                  <News
+                  <News apiKey = {this.apiKey} 
                     setLoaderBarState={this.setLoaderBarState}
                     key="general"
                     mode={this.state.mode}
@@ -65,7 +67,7 @@ export default class App extends Component {
               <Route
                 path="/business"
                 element={
-                  <News
+                  <News apiKey = {this.apiKey} 
                     setLoaderBarState={this.setLoaderBarState}
                     key="business"
                     mode={this.state.mode}
@@ -78,7 +80,7 @@ export default class App extends Component {
               <Route
                 path="/entertainment"
                 element={
-                  <News
+                  <News apiKey = {this.apiKey} 
                     setLoaderBarState={this.setLoaderBarState}
                     key="entertainment"
                     mode={this.state.mode}
@@ -91,7 +93,7 @@ export default class App extends Component {
               <Route
                 path="/general"
                 element={
-                  <News
+                  <News apiKey = {this.apiKey} 
                     setLoaderBarState={this.setLoaderBarState}
                     key="general"
                     mode={this.state.mode}
@@ -104,7 +106,7 @@ export default class App extends Component {
               <Route
                 path="/health"
                 element={
-                  <News
+                  <News apiKey = {this.apiKey} 
                     setLoaderBarState={this.setLoaderBarState}
                     key="health"
                     mode={this.state.mode}
@@ -117,7 +119,7 @@ export default class App extends Component {
               <Route
                 path="/science"
                 element={
-                  <News
+                  <News apiKey = {this.apiKey} 
                     setLoaderBarState={this.setLoaderBarState}
                     key="science"
                     mode={this.state.mode}
@@ -130,7 +132,7 @@ export default class App extends Component {
               <Route
                 path="/sports"
                 element={
-                  <News
+                  <News apiKey = {this.apiKey} 
                     setLoaderBarState={this.setLoaderBarState}
                     key="sports"
                     mode={this.state.mode}
@@ -143,7 +145,7 @@ export default class App extends Component {
               <Route
                 path="/technology"
                 element={
-                  <News
+                  <News apiKey = {this.apiKey} 
                     setLoaderBarState={this.setLoaderBarState}
                     key="technology"
                     mode={this.state.mode}

@@ -16,7 +16,7 @@ export default class News extends Component {
   async fetchNews(pageNumber) {
     try {
       this.props.setLoaderBarState(10);
-      const url = `https://newsapi.org/v2/top-headlines?category=${this.state.category}&country=${this.props.country}&apiKey=ee755bf42b6747f286ae256862715bfb&pageSize=${this.props.pageSize}&page=${pageNumber}`;
+      const url = `https://newsapi.org/v2/top-headlines?category=${this.state.category}&country=${this.props.country}&apiKey=${this.props.apiKey}&pageSize=${this.props.pageSize}&page=${pageNumber}`;
       let response = await fetch(url);
       this.props.setLoaderBarState(30);
 
@@ -60,7 +60,7 @@ export default class News extends Component {
         this.state.category
       }&country=${
         this.props.country
-      }&apiKey=ee755bf42b6747f286ae256862715bfb&pageSize=${
+      }&apiKey=${this.props.apiKey}&pageSize=${
         this.props.pageSize
       }&page=${this.state.page + 1}`;
       let response = await fetch(url);

@@ -1,5 +1,4 @@
 import { Component } from "react";
-
 export default class NewsItem extends Component {
   constructor() {
     super();
